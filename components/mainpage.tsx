@@ -12,28 +12,43 @@ const RecipeSearch = () => {
     
     const APIURL = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=';
     //deafult for know, will input functionality for this later
-    const UserInput = '&query=ice-cream&addRecipeInformation=true';
+    const UserInputFirstHalf = '&query=';
+    const UserInputSecondHalf = '&addRecipeInformation=true';
     
     const APIKEY = "9c86fee9c00b401e97accb0ced5dbc59";
     
     const onResult = (data: any) => {
-        setRecipes(data.results);
+        console.log(data);
+        setRecipes(data);
         setHasResult(true);
         console.log("We have a result!");
         //setIsLoading(false);
       };
     const onSubmit = (data: any) => {
-        fetch(APIURL+APIKEY+UserInput)
+        fetch(APIURL+APIKEY+UserInputFirstHalf+data)
         .then((res) => res.json())
-        .then(onResult) // call onresult funtion, take in data of json from api and sets our result use state to this data
-        .then(console.log);
-        console.log("Searching for: "+data)
+        .then(onResult); // call onresult funtion, take in data of json from api and sets our result use state to this data
+        console.log("Searching for: "+data);
     }
+
+    const onBack = () => {
+        setHasResult(false);
+        console.log("Going back to search page");
+    }
+
+    const Footer = (
+        <div>
+            <h2>Project by Dane Tsao</h2>
+        </div>
+    );
+
     let displayedElement = null;
     if (HasResult) {
         displayedElement = (
           <Recipe
-          recipes={Recipe}
+          recipeList={Recipes}
+          onBack= {onBack}
+          prompt= {prompt}
           />
         );
       } 
@@ -43,7 +58,7 @@ const RecipeSearch = () => {
             //Set props for form
             prompt= {prompt}
             setPrompt= {setPrompt}
-            characterLimit={10}
+            characterLimit={20}
             onSubmit= {onSubmit}
           />
         );
@@ -51,6 +66,7 @@ const RecipeSearch = () => {
     return (
         <div>
             {displayedElement}
+            {Footer}
         </div>
     );
 };

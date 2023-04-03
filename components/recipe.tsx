@@ -1,28 +1,42 @@
 import React from "react";
 
 interface RecipesProps {
-    recipes: any;
+    prompt: any;
+    recipeList: any;
+    onBack: any;
 }
 
 const Recipe: React.FC<RecipesProps> = (props) => {
-    const constructRecipes = (listRecipes: []) => {
-        return;
-        //here we will construct the recipes as tsx elements and return them to be rendered
-    };
-    
-    let r = (
-        <div>
-            <p>Name:</p>
-        </div>
-        );
+    function makeList(JsonList: []) {
+        let res = [];
+        for (let i = 0; i < 3; i++) {
+            let curJsonRecipe = JsonList[i];
+            let cur = (
+                <li>
+                    <div>
+                        <h1>{curJsonRecipe["title"]}</h1>    
+                        <p>Ingredients: {curJsonRecipe["title"]}</p>    
+                        <img src={curJsonRecipe["image"]}/>
+                    </div>
+                </li>
+            ) 
+            res[i] = cur;
+        }
+        return res;
+    }
+
+    const rList = props.recipeList.results;
+    console.log(rList);
+    const finalList = makeList(rList);
+
     return (
-        <div>
-            <div>
-                Recipes:
-            </div>
-            {r}
-            {r}
-        </div>
+      <div>
+        <h1>Recipes for {props.prompt}</h1>
+        <ul>{finalList}</ul>
+        <button
+            onClick={()=> props.onBack(false)}
+            >Back</button>
+      </div>
     );
 };
 
