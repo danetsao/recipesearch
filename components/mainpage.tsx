@@ -13,7 +13,7 @@ const RecipeSearch = () => {
     const APIURL = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=';
     //deafult for know, will input functionality for this later
     const UserInputFirstHalf = '&query=';
-    const UserInputSecondHalf = '&addRecipeInformation=true';
+    const UserInputSecondHalf = '&fillIngredients=true';
     
     const APIKEY = "9c86fee9c00b401e97accb0ced5dbc59";
     
@@ -25,7 +25,7 @@ const RecipeSearch = () => {
         //setIsLoading(false);
       };
     const onSubmit = (data: any) => {
-        fetch(APIURL+APIKEY+UserInputFirstHalf+data)
+        fetch(APIURL+APIKEY+UserInputFirstHalf+data+UserInputSecondHalf)
         .then((res) => res.json())
         .then(onResult); // call onresult funtion, take in data of json from api and sets our result use state to this data
         console.log("Searching for: "+data);
@@ -35,10 +35,9 @@ const RecipeSearch = () => {
         setHasResult(false);
         console.log("Going back to search page");
     }
-
     const Footer = (
         <div>
-            <h2>Project by Dane Tsao</h2>
+            <h2>Project by <a href="https://github.com/danetsao">Dane</a> | 2023</h2>
         </div>
     );
 
