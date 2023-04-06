@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./form";
 import Recipe from "./recipe";
+import styles from "../styles/mainpage.module.css"
 
 
 const RecipeSearch = () => {
@@ -36,7 +37,7 @@ const RecipeSearch = () => {
         console.log("Going back to search page");
     }
     const Footer = (
-        <div>
+        <div className={styles.Footer}>
             <h2>Project by <a href="https://github.com/danetsao">Dane</a> | 2023</h2>
         </div>
     );
@@ -63,7 +64,8 @@ const RecipeSearch = () => {
         );
       }
     return (
-        <div>
+        <div className="styles.container">
+          <h1 className="styles.heading">Recipe Search</h1>
             {displayedElement}
             {Footer}
         </div>

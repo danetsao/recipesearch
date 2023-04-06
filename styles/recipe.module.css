@@ -1,0 +1,71 @@
+/* Recipes.module.css */
+
+/* Container styles */
+.recipe-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.recipe-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2E3A59;
+}
+
+/* Recipe list styles */
+.recipe-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Recipe item styles */
+.recipe-item {
+  margin-bottom: 40px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.recipe-item:hover {
+  transform: scale(.95);
+}
+
+/* Recipe title styles */
+.recipe-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2E3A59;
+}
+
+/* Ingredient list styles */
+.ingredient-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ingredient item styles */
+.ingredient-item {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #646E88;
+}
+
+/* Image styles */
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}

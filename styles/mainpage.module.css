@@ -1,0 +1,78 @@
+/* MainPage.module.css */
+.html {
+    background-color: black;
+}
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form styles */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Form title styles */
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Form input styles */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e2e2e2;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  
+  /* Form button styles */
+  .form-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3066be;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .form-button:hover {
+    background-color: #183356;
+  }
+  
+  /* Footer styles */
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+  }
+  
+  .footer a {
+    color: #3066be;
+  }
+  
