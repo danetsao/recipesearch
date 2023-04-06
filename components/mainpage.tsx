@@ -65,7 +65,7 @@ const RecipeSearch = () => {
       }
     return (
         <div className="styles.container">
-          <h1 className="styles.heading">Recipe Search</h1>
+          <h1 className="styles.heading">Recipe Buddy</h1>
             {displayedElement}
             {Footer}
         </div>
