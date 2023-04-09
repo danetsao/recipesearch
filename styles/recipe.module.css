@@ -69,3 +69,17 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
 }
+.back-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #325692;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.back-button:hover {
+  background-color: #183356;
+}

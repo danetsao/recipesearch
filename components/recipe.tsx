@@ -55,7 +55,7 @@ const Recipe: React.FC<RecipesProps> = (props) => {
     <div className={styles["recipe-container"]}>
       <h1 className={styles["recipe-heading"]}>Recipes for {props.prompt}</h1>
       <ul className={styles["recipe-list"]}>{finalList}</ul>
-      <button onClick={() => props.onBack(false)}>Back</button>
+      <button className={styles["back-button"]} onClick={() => props.onBack(false)}>Back</button>
     </div>
   );
 };

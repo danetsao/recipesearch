@@ -53,7 +53,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: #3066be;
+    background-color: #2959a7;
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
@@ -61,18 +61,19 @@
     transition: background-color 0.3s ease-in-out;
   }
   .form-button:hover {
-    background-color: #183356;
+    background-color: #456b9d;
   }
   
   /* Footer styles */
   .footer {
-    margin-top: 20px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     color: #999;
+    margin-top: -50px;
   }
   
   .footer a {
     color: #3066be;
+
   }
   
